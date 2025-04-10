@@ -3,59 +3,76 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Roi Instrumental - Videoclub</title>
+    <title>Surat Cinta</title>
     <style>
         body {
-            background: linear-gradient(to right, #6dd5fa, #2980b9);
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
             font-family: 'Segoe UI', sans-serif;
             text-align: center;
             padding: 50px;
-            color: #ffffff;
+            color: #333;
         }
 
         h1 {
-            font-size: 2em;
             margin-bottom: 30px;
         }
 
-        audio {
+        #surat {
+            display: none;
             margin-top: 30px;
-            width: 80%;
-        }
-
-        .lyrics {
-            margin-top: 50px;
             font-size: 1.2em;
-            white-space: pre-line;
-            animation: fadeIn 3s ease-in-out;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffffb3;
+            animation: fadeIn 2s ease;
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1em;
+            border: none;
+            background-color: #ff7eb3;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e0569d;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Roi Instrumental - Videoclub</h1>
+    <h1>Untukmu yang Diam-diam Kucinta</h1>
 
-    <audio controls>
-        <source src="https://drive.google.com/uc?export=download&id=1yrjtfI4hCIYlGFQHVoZ_RVuWbXc0zmOa" type="audio/mpeg">
-        Maaf, browser Anda tidak mendukung pemutar audio.
-    </audio>
+    <button onclick="tampilkanSurat()">Buka Surat Cinta</button>
 
-    <div class="lyrics">
-Terima kasih atas kebersamaan ini,
-Langkah-langkah kita di lorong kenangan,
-Tawa dan air mata mewarnai hari,
-SMP akan selalu di hati...
+    <div id="surat">
+        Dalam diam aku menyapa,<br>
+        Dalam hening aku jatuh cinta.<br><br>
 
-Hari-hari penuh cerita,
-Gurau, semangat, dan pelajaran berharga,
-Kini saatnya kita melangkah,
-Tapi kenangan tak akan pernah sirna.
+        Senyummu bagai pagi cerah,<br>
+        Membawa hangat, usir resah.<br><br>
+
+        Aku tak pandai merangkai kata,<br>
+        Tapi hati ini sungguh nyata.<br><br>
+
+        Bila kau tahu rasaku kini,<br>
+        Maukah kau tinggal di hati ini?
     </div>
+
+    <script>
+        function tampilkanSurat() {
+            document.getElementById("surat").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
